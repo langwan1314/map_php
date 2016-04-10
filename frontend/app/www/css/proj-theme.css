@@ -1,0 +1,1710 @@
+@charset "utf-8";
+/**
+ * 全局主题样式
+ */
+
+/* 强制垂直滚动条，让非ie浏览器默认也显示垂直滚动条，防止因滚动条引起的闪烁 */
+html {
+	height: 101%;
+	overflow-y: scroll;
+}
+
+
+/* 定义项目自定义风格的固定宽度，包括主容器宽度，三栏布局宽度 */
+.self-container {
+	width: 1180px;
+	margin: auto;
+}
+
+.col-left, .col-middle, .col-right {
+	float: left;
+}
+
+.col-left {
+	width: 240px;
+	box-sizing: border-box;
+}
+
+.col-middle {
+	width: 750px;
+	/*width: 63.559%;*/
+	margin: 0;
+}
+
+.col-right {
+	width: 215px;
+	/*width: 16.103%;*/
+	margin: 0;
+}
+
+/* 定义项目自定义表单风格的固定宽度 */
+.col-form-2,
+.col-form-3,
+.col-form-4,
+.col-form-5 {
+	display: inline-block;
+	float: left;
+}
+
+.col-form-2 {
+	width: 160px;
+}
+
+.col-form-3 {
+	width: 265px;
+}
+
+.col-form-4 {
+	width: 295px;
+}
+
+.col-form-5 {
+	width: 320px;
+}
+
+/* 自定义面包屑导航样式 */
+.self-breadcrumb {
+	display: inline-block;
+	margin: 10px 0;
+}
+
+.self-breadcrumb a,
+.self-breadcrumb span {
+	margin: 0 3px;
+}
+
+.self-breadcrumb a:first-child {
+	margin-left: 0;
+}
+
+.self-breadcrumb a {
+	color: #000;
+	cursor: pointer;
+}
+
+.self-breadcrumb span {
+	color: #99cc33;
+}
+
+/* 自定义购物流程h3样式 */
+.nav-top h3.my-shop {
+	background-color: #fff;
+	color: #99cc33;
+	font-weight: bold;
+	text-align: left;
+}
+
+/* ===== index ===== */
+
+/* header */
+#header {
+	position: absolute;
+	top: 0;
+	left: 0;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	background-color: #f2f2f2;
+	border-bottom: 1px solid #e5e5e5;
+	z-index: 101;
+}
+
+#header p {
+	margin-top: 10px;
+}
+
+.h-l-widget, .h-r-widget {
+	display: inline-block;
+	width: 590px;
+}
+
+.h-l-widget {
+	color: #999;
+	margin-left: 10px;
+}
+
+.h-l-widget p.h-index a {
+	color: #99cc33;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.h-l-widget p.h-index span {
+	margin-left: 25px;
+	color: #999;
+}
+
+.h-l-widget p a, .h-r-widget p a {
+	color: #666;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.h-l-widget a:hover, .h-r-widget p a:hover {
+	color: #999;
+}
+
+.h-r-widget {
+	color: #666;
+}
+
+.h-r-widget p span {
+	font-weight: bold;
+	color: #ff8e0e;
+}
+
+/* footer */
+#footer {
+	color: #999;
+	width: 100%;
+}
+
+#footer nav ul {
+	width: 585px;
+}
+
+#footer nav {
+	padding: 30px 0 10px 0;
+}
+
+#footer nav ul li {
+	float: left;
+	margin-right: 10px;
+}
+
+#footer nav ul li:last-child {
+	margin-right: 0;
+}
+
+#footer div p {
+	width: 355px;
+	padding: 10px 0 40px 0;
+}
+
+/* main */
+#main-container {
+	min-height: 600px;
+}
+
+/* nav-header */
+.nav-header {
+	margin-top: 50px;
+}
+
+.nav-header figure img[alt='logo'] {
+	margin-left: 20px;
+}
+
+.nav-header figure img[alt='logo-title'] {
+	margin: 10px 0 0 22px;
+}
+
+.nav-header form div {
+	margin-top: 28px;
+	width: 500px;
+	height: 40px;
+}
+
+.nav-header form div img {
+	position: absolute;
+	margin: 9px 0 0 20px;
+}
+
+.nav-header form div input,
+.nav-header form div button {
+	float: left;
+}
+
+.nav-header form div input {
+	margin: 0 -3px 0 10px;
+	padding: 6px 6px 6px 30px;
+	width: 350px;
+	height: 36px;
+	font-size: 14px;
+	border: 3px solid #ff8e0e;
+}
+
+.nav-header form div button {
+	margin: 0;
+	padding: 12px 0;
+	width: 100px;
+	border: none;
+	background-color: #ff8e0e;
+	color: #fff;
+	text-align: center;
+}
+
+.nav-header form p {
+	margin: 10px 0 0 125px;
+}
+
+.nav-header form p a {
+	margin-left: 10px;
+}
+
+.nav-header div.shortcut {
+	margin-top: 35px;
+}
+
+.nav-header div.shortcut a {
+	margin-left: 20px;
+	text-decoration: none;
+	color: #666;
+	cursor: pointer;
+}
+
+.nav-header div.shortcut a:hover {
+	color: #999;
+}
+
+.nav-header div.shortcut a:first-child {
+	margin-left: 10px;
+}
+
+.nav-header div.shortcut a span {
+	margin-left: 5px;
+}
+
+/* nav top */
+.nav-top {
+	display: inline-block;
+	border-bottom: 1px solid #99cc33;
+}
+
+.nav-top h3 {
+	padding: 10px 0;
+	margin-bottom: 0;
+	background-color: #99cc33;
+	color: #fff;
+	font-size: 16px;
+	font-weight: bold;
+	text-align: center;
+}
+
+.nav-top div ul {
+	margin: 20px 0 0 0;
+	padding: 0 0 0 10px;
+}
+
+.nav-top div ul, .nav-top div ul li {
+	float: left;
+}
+
+.nav-top div ul li a {
+	display: inline-block;
+	padding: 10px 15px;
+	font-size: 14px;
+	font-weight: bold;
+	color: #666;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.nav-top div ul li:first-child a {
+	padding-left: 30px;
+}
+
+.nav-top div ul li a:hover, .nav-top div ul li a.current {
+	color: #99cc33;
+}
+
+.nav-top div p {
+	margin: 19px 0 0 0;
+	float: right;
+}
+
+.nav-top div p span {
+	color: #666;
+}
+
+.nav-top div p a {
+	display: inline-block;
+	position: relative;
+	z-index: 10;
+	top: 0;
+	right: -18px;
+	cursor: pointer;
+}
+
+.nav-top div p a img {
+	border: 4px solid #fff;
+	border-radius: 18px;
+	background-color: #fff;
+}
+
+.custom-menu-title {
+	margin: 20px 0 0 0;
+	width: 100%;
+	background-color: #99cc33;
+	color: #fff;
+	cursor: pointer;
+}
+
+.custom-menu-title span {
+	display: inline-block;
+	padding: 12px 0 11px 20px;
+}
+
+.custom-menu-title span i {
+	padding: 0 10px;
+	font-size: 14px;
+	font-weight: 500;
+	font-style: normal;
+}
+
+.custom-menu-title i {
+	padding: 10px 10px 10px 0;
+}
+
+.custom-menu-block {
+	position: absolute;
+	z-index: 100;
+	width: 190px;
+	background-color: #fff;
+	border: 2px solid #99cc33;
+}
+
+/* left-nav */
+
+.nav-left > ul {
+	padding-left: 0;
+	border: 1px solid #e7e7e7;
+}
+
+.nav-left > ul > li {
+	border-bottom: 1px solid #e7e7e7;
+	cursor: pointer;
+	box-sizing: border-box;
+}
+
+.nav-left > ul > li figure img {
+	display: inline-block;
+	float: left;
+}
+
+.nav-left > ul > li figure span {
+	display: inline-block;
+	float: left;
+	padding: 2px 0 5px 10px;
+	color: #666;
+	font-size: 14px;
+}
+
+.nav-left > ul > li p {
+	position: relative;
+	top: -29px;
+	margin-left: 14px;
+}
+
+.nav-left > ul > li p i {
+	color: #e7e7e7;
+}
+
+.nav-left > ul > li:last-child,
+.nav-left > ul > li.hover:last-child {
+	border-bottom: none;
+}
+
+.nav-left > ul > li.hover {
+	background-color: #99cc33;
+	margin: 0;
+	border-bottom: 1px solid transparent;
+}
+
+.nav-left > ul > li.hover figure span,
+.nav-left > ul > li.hover p i,
+.nav-left > ul > li.hover ul li a {
+	color: #fff;
+}
+
+.nav-left > ul ul {
+}
+
+.nav-left > ul ul, .nav-left > ul ul li {
+	float: left;
+	padding: 0 5px;
+}
+
+.nav-left > ul ul li a {
+	color: #b1b1b1;
+	text-decoration: none;
+	cursor: pointer;
+}
+.nav-left > ul ul li a:hover {
+	color: #b1b1b1;
+	text-decoration:underline;
+	cursor: pointer;
+}
+/* nav-aside */
+.nav-aside {
+	position: absolute;
+	margin-left: 238px;
+	margin-top: -32px;
+	z-index: 1000;
+	width: 375px;
+	border: 2px solid #99cc33;
+	background-color: #fff;
+	display: none;
+}
+
+.nav-aside h4 {
+	margin: 20px 0 0 20px;
+	font-size: 14px;
+	color: #666;
+	text-align: left;
+}
+
+.nav-aside ul {
+	padding-left: 20px;
+	margin-bottom: 20px;
+}
+
+.nav-aside ul, .nav-aside ul li {
+	float: left;
+}
+
+.nav-aside ul li a {
+	display: inline-block;
+	margin: 12px;
+	color: #b1b1b1 !important;
+}
+
+/* main-banner */
+#main-banner .no-offset {
+	padding: 0;
+	margin: 0;
+}
+
+.flex-direction-nav {
+	display: none;
+}
+
+/* r-aside01 */
+.r-aside01 p {
+	margin: 5px 0 5px 0;
+	height: 125px;
+}
+
+/* good list block */
+
+.goods-list-block header {
+	margin-left: 0;
+	margin-right: 0;
+	border-bottom: 2px solid #99cc33;
+	display: block;
+	height: 20px;
+	float: left;
+	width: 100%;
+}
+
+.goods-list-block header h3 {
+	font-size: 18px;
+	font-weight: bold;
+	color: #99cc33;
+	padding-bottom: 5px;
+	text-indent: 5px;
+	line-height: 18px;
+}
+
+.goods-list-block header ul {
+	/* margin: 20px 0 10px 0; */
+	padding-left: 0;
+}
+
+.goods-list-block header ul, .goods-list-block header ul li {
+	float: left;
+}
+
+.goods-list-block header ul li a {
+	display: inline-block;
+	margin: 5px 10px;
+	color: #999;
+	cursor: pointer;
+	text-decoration: none;
+}
+
+.goods-list-block header ul li a.current, .goods-list-block header ul li a:hover {
+	color: #99cc33;
+}
+
+.goods-list-block header p {
+	/* margin: 20px 0 10px 0; */
+}
+
+.goods-list-block header p a {
+	color: #999;
+	cursor: pointer;
+	text-decoration: none;
+}
+
+.goods-list-block figure.goods-tags-block01 ul {
+	padding-left: 0;
+	margin-bottom: 0;
+	padding-bottom: 20px;
+	background-color: #ffbb00;
+}
+
+.goods-list-block figure.goods-tags-block02 ul {
+	padding-left: 0;
+	margin-bottom: 0;
+	padding-bottom: 20px;
+	background-color: #f4935f;
+}
+
+.goods-list-block figure.goods-tags-block01 ul,
+.goods-list-block figure.goods-tags-block02 ul,
+.goods-list-block figure.goods-tags-block01 ul li,
+.goods-list-block figure.goods-tags-block02 ul li {
+	float: left;
+}
+
+.goods-list-block figure.goods-tags-block01 ul li a,
+.goods-list-block figure.goods-tags-block02 ul li a {
+	display: inline-block;
+	padding: 24px 0;
+	margin: 10px;
+	width: 60px;
+	height: 60px;
+	text-align: center;
+	background-color: #fff;
+	color: #2f2f2f;
+	border-radius: 30px;
+	cursor: pointer;
+	text-decoration: none;
+}
+
+.goods-list ul {
+	padding-left: 0;
+}
+
+.goods-list ul, .goods-list ul li {
+	float: left;
+}
+
+.goods-list ul li div.goods-show img[alt^="goods"] {
+	display: block;
+	width: 168px;
+	margin: 2px auto;
+}
+
+.goods-list ul li div.goods-show img[alt^="icon"] {
+	display: block;
+	float: right;
+}
+
+.goods-list ul li div.goods-show p.goods-describe {
+	display: block;
+	margin: 10px auto 10px auto;
+	width: 150px;
+	line-height: 20px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	color: #666;
+}
+.goods-list ul li div.goods-show p.goods-describe a:hover{color:#ff8e0e;}
+.goods-list ul li div.goods-show p.shop-widget {
+	display: inline-block;
+	margin: 5px 0 18px 18px;
+	width: 150px;
+}
+
+.goods-list ul li div.goods-show p.shop-widget > span {
+	display: inline-block;
+	float: left;
+}
+
+.goods-list ul li div.goods-show p.shop-widget > span > i,
+.goods-list ul li div.goods-show p.shop-widget > span:last-child {
+	display: inline-block;
+}
+
+.goods-list ul li div.goods-show p.shop-widget > span > i {
+	color: #999;
+	font-style: normal;
+	text-decoration: line-through;
+}
+
+.goods-list ul li div.goods-show p.shop-widget > span:last-child {
+	float: right;
+	color: #ff8e0e;
+}
+
+.goods-list ul li div.goods-show p.shop-widget > span:last-child i {
+	font-style: normal;
+	font-size: 14px;
+	font-weight: bold;
+	color: #ff8e0e;
+	text-decoration: none;
+}
+
+.goods-list ul li div.sale-out-wrap {
+	position: absolute;
+	z-index: 100;
+	margin-top: -200px;
+	margin-left: 55px;
+	width: 96px;
+	height: 96px;
+	border-radius: 48px;
+	background-color: rgba(102, 102, 102, 0.6);
+}
+
+/* hot-sale */
+.hot-sale > div span {
+	display: inline-block;
+	margin: 10px 20px;
+	font-size: 14px;
+	color: #fff;
+}
+
+.hot-sale > div.hot-sale-title01:after,
+.hot-sale > div.hot-sale-title02:after {
+	content: " ";
+	position: absolute;
+	width: 0;
+	height: 0;
+	margin-top: -4px;
+	margin-left: 93px;
+}
+
+.hot-sale > div.hot-sale-title01 {
+	background-color: #99cc33;
+}
+
+.hot-sale > div.hot-sale-title02 {
+	background-color: #f4935f;
+}
+
+.hot-sale > ul {
+	padding-left: 0;
+	background-color: #f1f1f1;
+}
+
+.hot-sale > ul li {
+	display: inline-block;
+	margin: 10px 15px;
+}
+
+.hot-sale > ul li p a, .hot-sale > ul li p span {
+	display: inline-block;
+	margin-top: 5px;
+	width: 150px;
+	line-height: 20px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	color: #666;
+}
+
+.hot-sale > ul li p a {
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.hot-sale > ul li p a:hover {
+	color: #999;
+}
+
+/* brand promote */
+.brand-promote {
+	margin-top: 50px;
+	width: 100%;
+	background-color: #f3f3f3;
+}
+
+.brand-promote ul {
+	padding: 0;
+}
+
+.brand-promote ul li {
+	float: left;
+	margin: 30px 77px;
+	text-align: center;
+}
+
+/* sider fix bar */
+.side-fix-nav {
+	right: 0;
+	top: 0;
+	width: 35px;
+	height: 100%;
+	background-color: #333;
+	z-index: 100;
+	position: fixed;
+}
+
+.side-fix-nav div.vertical-center-box {
+	position: relative;
+	top: 25%;
+	right: 0;
+	height: 400px;
+}
+
+.side-fix-nav div.vertical-center-box a.cart {
+	display: inline-block;
+	margin: 10px 8px;
+	text-decoration: none;
+	color: #fff;
+	cursor: pointer;
+}
+
+.side-fix-nav div.vertical-center-box a.cart span {
+	display: block;
+	padding: 10px 4px;
+}
+
+.side-fix-nav div.vertical-center-box i.divide {
+	display: block;
+	margin-left: 6px;
+	width: 22px;
+	height: 1px;
+	background-color: #b5b5b5;
+}
+
+.side-fix-nav div.vertical-center-box ul {
+	margin-top: 15px;
+	padding-left: 0;
+}
+
+.side-fix-nav div.vertical-center-box ul li > a {
+	display: inline-block;
+	cursor: pointer;
+	padding: 10px 9px;
+}
+
+.side-fix-nav div.vertical-center-box ul li.hover > a {
+	background-color: #99cc33;
+	padding: 6px 9px;
+	margin: 4px 0;
+	transition: .15s;
+}
+
+.side-fix-nav div.vertical-center-box ul li > a img {
+	width: 18px;
+	height: 18px;
+}
+
+.side-fix-nav div.vertical-center-box ul li p {
+	position: absolute;
+	z-index: 100;
+	display: none;
+	/* display: inline-block; */
+	margin-left: -80px;
+	margin-top: -33px;
+	width: 80px;
+	background-color: #f8ffeb;
+	border: 1px solid #d1eaa0;
+	text-align: center;
+}
+
+.side-fix-nav div.vertical-center-box ul li p a {
+	display: inline-block;
+	padding: 8px 0;
+	color: #333;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.side-fix-nav div.vertical-center-box ul li p a:hover {
+	color: #999;
+}
+
+.side-fix-nav div.vertical-center-box ul li p i {
+	position: absolute;
+	z-index: 1000;
+	right: -5px;
+	margin-top: 10px;
+	border-top: 5px solid transparent;
+	border-left: 5px solid #d1eaa0;
+	border-bottom: 5px solid transparent;
+}
+
+.side-fix-nav div.vertical-center-box ul li p i:after {
+	content: "";
+	position: absolute;
+	z-index: 110;
+	margin-left: -6px;
+	margin-top: -4px;
+	border-top: 4px solid transparent;
+	border-left: 4px solid #f8ffeb;
+	border-bottom: 4px solid transparent;
+}
+
+.side-fix-nav div.vertical-center-box a.go-top {
+	position: absolute;
+	display: none;
+	bottom: 0;
+	margin-left: 8px;
+	cursor: pointer;
+}
+
+/* ===== goods list ===== */
+.goods-category nav {
+	display: inline-block;
+	border: 1px solid #dcdcdc;
+}
+
+.goods-category nav h4 {
+	margin: 20px 0 20px 20px;
+	font-size: 12px;
+	color: #99cc33;
+}
+
+.goods-category nav section {
+	display: inline-block;
+}
+
+.goods-category nav section p {
+	display: inline-block;
+	float: left;
+	margin-left: 20px;
+}
+
+.goods-category nav section a {
+	color: #666;
+	cursor: pointer;
+}
+
+.goods-category nav section a:hover,
+.goods-category nav section a.select {
+	color: #99cc33;
+}
+
+.goods-category nav section ul,
+.goods-category nav section ul li {
+	float: left;
+}
+
+.goods-category nav section ul {
+	width: 1080px;
+}
+
+.goods-category nav section ul li {
+	margin: 0 10px 10px 10px;
+}
+
+.goods-type-list-block header {
+	display: inline-block;
+	margin-top: 20px;
+	width: 100%;
+	background-color: #f8ffeb;
+	border: 1px solid #dcdcdc;
+}
+
+.goods-type-list-block header ul,
+.goods-type-list-block header ul li {
+	float: left;
+}
+
+.goods-type-list-block header ul {
+	padding-left: 0;
+	margin-bottom: 0;
+}
+
+.goods-type-list-block header ul li a {
+	display: inline-block;
+	padding: 10px 15px;
+	border-right: 1px solid #dcdcdc;
+	color: #666;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.goods-type-list-block header ul li a.current,
+.goods-type-list-block header ul li a:hover {
+	background-color: #fff;
+	color: #99cc33;
+}
+
+.goods-type-list-block header ul li a i {
+	margin-left: 5px;
+	font-size: 10px;
+}
+
+.goods-type-list-block header ul li form {
+	position: absolute;
+	z-index: 100;
+	margin-top: -32px;
+	margin-left: 82px;
+	background-color: #fff;
+	border: 1px solid #dcdcdc;
+	border-top: none;
+}
+
+.goods-type-list-block header ul li form p {
+	margin: 10px;
+}
+
+.goods-type-list-block header ul li form input[type='text'] {
+	border: 1px solid #dcdcdc;
+	padding: 5px 5px 5px 20px;
+	width: 60px;
+}
+
+.goods-type-list-block header ul li form i {
+	position: absolute;
+	z-index: 101;
+	margin-top: 16px;
+	margin-left: 5px;
+	color: #666;
+}
+
+.goods-type-list-block header ul li form button {
+	padding: 2px 15px;
+}
+
+.goods-type-list-block div ul,
+.goods-type-list-block div ul li {
+	float: left;
+}
+
+.goods-type-list-block > div {
+	display: inline-block;
+	margin: 10px 0;
+}
+
+.goods-type-list-block div ul {
+	padding-left: 0;
+	margin-bottom: 0;
+}
+
+.goods-type-list-block div ul li {
+	margin: 10px;
+}
+
+.goods-type-list-block div ul li:nth-child(4n) {
+	margin-right: 0;
+}
+
+.goods-type-list-block div ul li:nth-child(4n+1) {
+	margin-left: 0;
+}
+
+.goods-type-list-block div ul li div {
+	border: 1px solid #dcdcdc;
+	cursor: pointer;
+	padding: 57px;
+}
+
+.goods-type-list-block div ul li div:hover {
+	border: 2px solid #99cc33;
+	padding: 56px;
+	background-color: #f8ffeb;
+}
+
+.goods-type-list-block div ul li div p {
+	display: block;
+	margin: 10px auto 10px auto;
+	width: 150px;
+	line-height: 20px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	color: #666;
+}
+
+.goods-type-list-block div ul li div p span,
+.goods-type-list-block div ul li div p i {
+	display: inline-block;
+}
+
+.goods-type-list-block div ul li div p i {
+	font-style: normal;
+	color: #99cc33;
+}
+
+.goods-type-list-block div ul li div p span:last-child {
+	margin-left: 20px;
+	color: #99cc33;
+}
+
+.goods-type-list-block div ul li div p span:last-child i {
+	position: absolute;
+	margin-left: 3px;
+	font-size: 18px;
+	font-weight: bold;
+}
+
+/* ===== goods details ===== */
+
+.goods-operate-block figure div.goods-img,
+.goods-operate-block figure div.goods-operate {
+	float: left;
+}
+
+.goods-operate-block figure div.goods-img {
+	margin: 20px 90px;
+}
+
+.goods-operate-block figure div.goods-operate {
+	margin: 20px 0 20px 50px;
+}
+
+.goods-operate-block figure div.goods-operate section {
+	margin: 15px 0;
+}
+
+.goods-operate-block figure div.goods-operate section:first-child {
+	margin-top: 0;
+}
+
+.goods-operate-block figure div.goods-operate section.goods-title h4 {
+	font-size: 14px;
+	font-weight: bold;
+}
+
+.goods-operate-block figure div.goods-operate section.goods-wrapper {
+	background-color: #f8ffeb;
+	border: 1px solid #d1eaa0;
+	display: inline-block;
+}
+
+.goods-operate-block figure div.goods-operate section.goods-wrapper div {
+	float: left;
+	padding: 10px;
+	border-right: 1px solid #d1eaa0;
+}
+
+.goods-operate-block figure div.goods-operate section.goods-wrapper div:last-child {
+	border-right: 0;
+}
+
+.goods-operate-block figure div.goods-operate section.goods-wrapper div p {
+	margin-bottom: 0;
+	width: 341px;
+}
+
+.goods-operate-block figure div.goods-operate section.goods-wrapper div p:first-child span:last-child {
+	color: #666;
+	text-decoration: line-through;
+}
+
+.goods-operate-block figure div.goods-operate section.goods-wrapper div p:last-child span:last-child {
+	display: inline-block;
+	margin: 10px 0 0 36px;
+	color: #99cc33;
+}
+
+.goods-operate-block figure div.goods-operate section.goods-wrapper div p:last-child span:last-child i {
+	font-style: normal;
+	font-size: 18px;
+	font-weight: bold;
+}
+
+.goods-operate-block figure div.goods-operate section.goods-wrapper div > i,
+.goods-operate-block figure div.goods-operate section.goods-wrapper div > span {
+	display: block;
+	width: 119px;
+	text-align: center;
+}
+
+.goods-operate-block figure div.goods-operate section.goods-wrapper div > i {
+	font-style: normal;
+	font-size: 16px;
+	font-weight: bold;
+	color: #99cc33;
+}
+
+.goods-operate-block figure div.goods-operate section.goods-wrapper div:last-child > i {
+	color: #ff8e0e;
+}
+
+.goods-operate-block figure div.goods-operate section.goods-wrapper div > span {
+	margin-top: 10px;
+	color: #666;
+}
+
+.goods-operate-block figure div.goods-operate section form fieldset {
+	width: 643px; /* 这里指定的原因 */
+}
+
+.goods-operate-block figure div.goods-operate section form fieldset > div {
+	display: inline-block;
+	width: 100%;
+	margin: 15px 0;
+}
+
+.goods-operate-block figure div.goods-operate section form fieldset > div label,
+.goods-operate-block figure div.goods-operate section form fieldset > div a,
+.goods-operate-block figure div.goods-operate section form fieldset > div span,
+.goods-operate-block figure div.goods-operate section form fieldset > div input,
+.goods-operate-block figure div.goods-operate section form fieldset > div button,
+.goods-operate-block figure div.goods-operate section form fieldset > div ul {
+	display: inline-block;
+	float: left;
+}
+
+.goods-operate-block figure div.goods-operate section form label {
+	margin-top: 10px;
+	font-weight: normal;
+	color: #666;
+}
+
+.goods-operate-block figure div.goods-operate section form fieldset > div span {
+	margin: 10px 0 0 10px;
+	color: #666;
+}
+
+.goods-operate-block figure div.goods-operate section form fieldset > div div a {
+	display: inline-block;
+	padding: 10px;
+	border: 1px solid #dcdcdc;
+	color: #666;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.goods-operate-block figure div.goods-operate section form fieldset > div div a:hover {
+	color: #99cc33;
+}
+
+.goods-operate-block figure div.goods-operate section form fieldset > div.num-ctrl div {
+	margin-left: 2px;
+	float: left;
+	width: 20px;
+}
+
+.goods-operate-block figure div.goods-operate section form fieldset > div.num-ctrl i {
+	padding: 1px;
+	margin: 1px;
+	border: 1px solid #dcdcdc;
+	cursor: pointer;
+	color: #666;
+}
+
+.goods-operate-block figure div.goods-operate section form fieldset > div.num-ctrl i:first-child {
+	margin-top: 0;
+}
+
+.goods-operate-block figure div.goods-operate section form fieldset > div.num-ctrl i:hover {
+	color: #999;
+}
+
+.goods-operate-block figure div.goods-operate section form input[type='text'] {
+	margin-left: 12px;
+	padding: 9px;
+	width: 80px;
+	border: 1px solid #dcdcdc;
+}
+
+.goods-operate-block figure div.goods-operate section form fieldset > div ul {
+	padding-left: 0;
+	width: 315px;
+}
+
+.goods-operate-block figure div.goods-operate section form fieldset > div ul li {
+	float: left;
+}
+
+.goods-operate-block figure div.goods-operate section form fieldset > div ul li a {
+	padding: 10px 25px;
+	margin: 10px;
+	border: 1px solid #99cc33;
+}
+
+.goods-operate-block figure div.goods-operate section form fieldset > div button {
+	margin-left: 50px;
+	padding: 10px 0;
+	width: 200px;
+	text-align: center;
+	border: none;
+	background-color: #ff8e0e;
+	font-size: 14px;
+	color: #fff;
+}
+
+.goods-operate-block figure div.goods-operate section form fieldset > div button:hover {
+	background-color: #99cc33;
+}
+
+.goods-operate-block figure div.goods-operate section form fieldset > div a.fav {
+	margin: 10px 0 0 35px;
+	color: #666;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+ul.details-tab {
+	background-color: #f8ffeb;
+}
+
+ul.details-tab li a {
+	color: #666;
+}
+
+ul.details-tab li.active > a,
+ul.details-tab li.active > a:hover,
+.nav-tabs > li.active > a:focus {
+	border-top: 2px solid #99cc33;
+	color: #99cc33;
+}
+
+ul.details-tab li a:hover {
+	background-color: #f8ffeb;
+}
+
+div#intro figure {
+	width: 980px;
+	margin: 20px auto;
+}
+
+div#comment ul {
+	padding-left: 0;
+}
+
+div#comment ul li {
+	display: inline-block;
+	border: 1px solid #dcdcdc;
+	border-top: none;
+}
+
+div#comment ul li figure {
+	width: 40px;
+	margin: 20px;
+	text-align: center;
+}
+
+div#comment ul li figure img {
+	margin: 10px 10px 10px 0;
+}
+
+div#comment ul li p {
+	margin: 20px;
+	width: 120px;
+}
+
+div#comment ul li p span {
+	position: relative;
+	top: 25px;
+}
+
+div#comment ul li p:last-child {
+	width: 850px;
+	line-height: 18px;
+	text-indent: 2em;
+}
+
+/* ===== shop cart ===== */
+
+
+/* ===== login ===== */
+
+.login-container .login-self-container,
+.login-header .login-self-container {
+	width: 980px;
+	margin: auto;
+}
+
+.login-header {
+	display: inline-block;
+	width: 100%;
+}
+
+.login-header figure {
+	display: inline-block;
+	margin: 35px 0;
+}
+
+.login-header figure img,
+.login-header figure i {
+	display: inline-block;
+	float: left;
+}
+
+.login-header figure img[alt="logo-title"] {
+	margin-top: 28px;
+}
+
+.login-header figure i {
+	margin: 20px 0 0 20px;
+}
+
+.login-header figure i {
+	width: 2px;
+	height: 48px;
+	background-color: #c4c4c4;
+}
+
+.login-header figure a {
+	color: #666;
+	display: inline-block;
+	float: left;
+	font-size: 20px;
+	margin: 33px 0 0 20px;
+	text-decoration: none;
+}
+
+.login-container {
+	width: 100%;
+	background-color: #eee;
+}
+
+.login-banner, .login-box {
+	display: inline-block;
+	float: left;
+}
+
+.login-banner {
+	width: 55%;
+	margin: 50px 20px 50px 0;
+}
+
+.login-banner img {
+	min-width: 55%;
+}
+
+.login-box {
+	width: 40%;
+	margin: 50px 10px;
+}
+
+.login-box .panel {
+	margin-bottom: 0;
+}
+
+.login-box .panel-heading,
+.login-box .panel-body {
+	padding: 30px;
+}
+
+.login-box .panel-heading {
+	display: inline-block;
+	padding-bottom: 0;
+	width: 100%;
+	background-color: #fff;
+	border-bottom: none;
+}
+
+.login-box .panel-heading h3,
+.login-box .panel-heading p {
+	display: inline-block;
+	margin-top: 5px;
+}
+
+.login-box .panel-heading h3 {
+	color: #666;
+}
+
+.login-box .panel-heading p a {
+	margin-left: 5px;
+	text-decoration: none;
+	cursor: pointer;
+	color: #99cc33;
+}
+
+.login-box .panel-body {
+	padding: 10px 20px;
+}
+
+.login-box .panel-body div.input-group {
+	margin-bottom: 15px;
+}
+
+.login-box .panel-body div.input-group a.form-tool {
+	position: absolute;
+	z-index: 100;
+	margin: 10px 0 0 -30px;
+	cursor: pointer;
+}
+
+.login-box .panel-body .input-group-addon,
+.login-box .panel-body input {
+	border-radius: 0;
+}
+
+.login-box .panel-body div.login-widget {
+	width: 100%;
+	display: inline-block;
+	margin-bottom: 20px;
+}
+
+.login-box .panel-body div.login-widget p,
+.login-box .panel-body div.login-widget a,
+.login-box .panel-body div.login-widget p label {
+	display: inline-block;
+}
+
+.login-box .panel-body div.login-widget p {
+	margin-bottom: 0;
+}
+
+.login-box .panel-body div.login-widget p label {
+	margin: -2px 0 0 10px;
+	font-weight: normal;
+	color: #666;
+}
+
+.login-box .panel-body div.login-widget a {
+	text-decoration: none;
+	cursor: pointer;
+	color: #99cc33;
+}
+
+.login-box .panel-body .input-group-addon {
+	color: #b4b4b4;
+}
+
+.login-btn-block button {
+	padding: 10px 0;
+	width: 100%;
+	border: none;
+	background-color: #ff8e0e;
+	font-size: 14px;
+	color: #fff;
+}
+
+.login-btn-block button:hover {
+	background-color: #99cc33;
+}
+
+.partner-login-widget h5 {
+	font-size: 12px;
+	color: #666;
+}
+
+.partner-login-widget ul,
+.partner-login-widget ul li {
+	float: left;
+}
+
+.partner-login-widget ul {
+	padding-left: 0;
+	margin-bottom: 25px;
+}
+
+.partner-login-widget ul li {
+	margin-right: 5px;
+	color: #b4b4b4;
+}
+
+.partner-login-widget ul li a {
+	text-decoration: none;
+	cursor: pointer;
+	color: #b4b4b4;
+}
+
+/* ===== register ===== */
+.register-box .panel {
+	margin: 50px 0;
+}
+
+.register-box .panel-body {
+	padding: 40px 20px;
+}
+
+.register-box .panel-body div.form-group input {
+	border-radius: 0;
+}
+
+.register-box .panel-body div.form-group label {
+	padding-top: 12px;
+	font-weight: normal;
+	color: #666;
+	font-size: 14px;
+}
+
+.register-box .panel-body div.form-group label i.must {
+	position: absolute;
+	margin: 3px 0 0 -12px;
+	font-style: normal;
+	color: #ff972f;
+}
+
+.register-box .panel-body div.form-group div > i {
+	position: relative;
+	z-index: 100;
+	top: -24px;
+	left: 265px;
+	font-size: 16px;
+	color: #e5e5e5;
+}
+
+.register-box .panel-body div.form-group a.valid-code {
+	margin-left: 10px;
+	display: inline-block;
+	padding: 10px 19px;
+	background-color: #e5e5e5;
+	color: #666;
+	border: 1px solid #c8c8c8;
+	text-align: center;
+	cursor: pointer;
+}
+
+.register-box .panel-body div.form-group p.valid-img-block,
+.register-box .panel-body div.form-group p.valid-img-block span {
+	margin-left: 10px;
+}
+
+.register-box .panel-body div.form-group p.valid-img-block a {
+	color: #ff8e0e;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.register-box .panel-body div.register-widget {
+	width: 350px;
+	margin: auto;
+}
+
+.register-box .panel-body div.register-widget p,
+.register-box .panel-body div.register-widget a {
+	display: inline-block;
+}
+
+.register-box .panel-body div.register-widget p label {
+	font-style: normal;
+	color: #666;
+}
+
+.register-box .panel-body div.register-widget a {
+	margin: 5px 0 0 10px;
+	color: #ff8e0e;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.register-box .panel-body div.login-btn-block {
+	width: 200px;
+	margin-left: 300px;
+}
+
+/* ===== register-success ===== */
+
+.register_success_panel {
+	margin: 50px 0;
+}
+
+.register_success_panel p {
+	width: 300px;
+	margin: auto;
+	text-align: center;
+}
+
+.register_success_panel p:first-child {
+	padding: 100px 0 20px 0;
+}
+
+.register_success_panel p:first-child img {
+	margin: 15px;
+}
+
+.register_success_panel p:first-child span {
+	position: relative;
+	top: 4px;
+	font-size: 22px;
+}
+
+.register_success_panel p:last-child {
+	padding: 20px 0 200px 0;
+}
+
+.register_success_panel p:last-child a {
+	color: #99cc33;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.register_success_panel p:last-child a.shopping {
+	display: inline-block;
+	padding: 8px 18px;
+	margin-right: 10px;
+	background-color: #99cc33;
+	color: #fff;
+	border-radius: 4px;
+}
+
+/* ===== plugins & tools ===== */
+
+/* proj insert icons */
+.farm-icon-customer {
+	position: relative;
+	margin: 0 5px;
+	display: inline-block;
+	width: 18px;
+	height: 19px;
+	vertical-align: middle;
+	background: url("../images/icons/icon_customer.png") no-repeat center;
+}
+
+/* Common tips */
+.common-tip, .error-tip {
+	line-height: 15px;
+	margin-left: 25px;
+}
+
+.common-tip {
+	color: #c8c8c8;
+}
+
+.common-tip i {
+	color: #666;
+	font-style: normal;
+}
+
+.error-tip {
+	color: red;
+}
+
+/* paging */
+
+/* self modal */
+.farm-modal {
+	min-height: 300px;
+}
+
+.farm-modal .farm-modal-tips {
+	margin: 50px 20px;
+	text-align: center;
+}
+
+.farm-modal .farm-modal-tips img {
+	margin: 10px;
+}
+
+.farm-modal .farm-modal-tips span {
+	font-size: 14px;
+	font-weight: bold;
+	color: #99cc33;
+}
+
+.farm-modal .farm-modal-widget {
+	display: inline-block;
+	width: 100%;
+}
+
+.farm-modal .farm-modal-widget div {
+	width: 300px;
+	margin: 0 auto;
+}
+
+.farm-modal .farm-modal-widget div button {
+	padding: 10px 0;
+	width: 180px;
+	border: none;
+	background-color: #ff8e0e;
+	font-size: 14px;
+	color: #fff;
+}
+
+.farm-modal .farm-modal-widget div button:hover {
+	background-color: #99cc33;
+}
+
+.farm-modal .farm-modal-widget div p {
+	margin: 10px 0 10px 20px;
+	color: #666;
+}
+
+.farm-modal .farm-modal-widget div p a {
+	font-weight: bold;
+	color: #99cc33;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.modal label i {
+	position: relative;
+	top: 3px;
+	margin-right: 10px;
+	font-style: normal;
+}

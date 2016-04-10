@@ -1,0 +1,30 @@
+@charset "UTF-8";
+.p-user .sidebar{width: 150px;border: 1px solid #eee;}
+.userinfo_box{margin-top:10px;display:block;width:100%;float: left;}
+.userinfo_bar .f14{float:left;}
+.main .box {text-align:left;font-size: 12px;border: none;}
+.userinfo_box .ico_info img{border:1px solid #eee;}
+.userinfo_box .ico_info .up-ico-btn{text-align:center;font-size: 13px;}
+.userinfo_box .user_info{margin-left:20px;}
+.userinfo_box .user_info table{width:100%}
+.userinfo_box .user_info td{padding-bottom:10px;padding-right: 10px;}
+.userinfo_box .user_info td{margin-left:20px;font-size: 12px;font-family: "宋体","Arial Narrow",HELVETICA;}
+.userinfo_box .user_info td.wel{color:#333;font-weight: bold;}
+.userinfo_box .user_count .tab{background-color: #F2F2F2;height: 35px;line-height: 35px;padding: 0 15px;display: block;float: left;margin-right: 15px;} 
+
+.order_title{text-align:left;padding:20px 0 5px 20px;}
+.ucenter .list_table{font-size: 12px;}
+.p-user .uc_title{border-top:none;padding:0 0;margin:0;height:30px;border-left: 1px solid #DBDBDB;background-color: #fff;border-bottom: 1px solid #DBDBDB;}
+.p-user .uc_title label.current{background-color:#fff; border-top: 2px solid #99cc33;border-bottom: 1px solid #fff;}
+.p-user .uc_title label{ border-right: 1px solid #DBDBDB;border-top: 1px solid #DBDBDB; margin: -1px 0 0 0;    text-align: center;    padding: 0 10px; border-bottom: 1px solid #DBDBDB;}
+.p-user .uc_title label span{height:30px;color: #333;background-color: #fff;font-weight: normal;padding: 0;margin: 0;}
+.p-user .uc_title label.current a{color:666;}
+
+.p-user .form_content{padding:0}
+
+.p-user .box .title h3{margin:0; padding: 0;}
+.tabs_content{border: 1px solid #D5D5D5;border-top:none;}
+.add_tabs{margin-bottom:10px;}
+
+.p-user .border_table .check{width: 50px;padding: 0 0 0 5px;}
+.p-user .border_table tfoot td{padding-left:5px}

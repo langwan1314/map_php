@@ -1,0 +1,19 @@
+.cart_table tr td {font-size:12px; text-align:center;}
+.cart_table .img img{border:none;}
+.cart_table .stats .b-pay-td{background: #ff8e0e;height: 100%;padding: 0;margin: 0;width: 110px;}
+.cart_table .stats .b-pay-td .btn_pay{background:none; color:#fff;font-size: 15px;width: 100%;margin: 0;line-height: 53px;text-align: center;text-indent: 0;height: 100%;text-decoration: none;}
+.cart_top {
+  height: 120px;
+  width: 990px;
+  float: left;
+  margin-top:20px;
+}
+.cart_table .check_all{text-align:left;padding-left: 14px;}
+.cart_table .check_all input{margin-right: 30px;margin: 0;vertical-align: middle;}
+.mt25 {
+  margin-top: 25px;
+}
+.second .help dl{width:183px}
+.cart_box .submit_order{background:none;background-color:#ff8e0e; text-indent:0; line-height:44px; color:#fff; font-size:16px;}
+
+.cart_box .coupon{margin:0;padding:0}

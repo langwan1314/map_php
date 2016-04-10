@@ -1,0 +1,144 @@
+<link rel="stylesheet" href="{www:css/index.css}"/>
+<!-- END: nav-header -->
+<!-- BEGIN: nav-left top and banner -->
+<section class="p-container clearfix">
+	<nav class="nav-left col-left">
+		<ul class="nav-ul1">
+			{set:$category_top_list = Api::run('getCategoryListTop');}
+			{foreach:items=$category_top_list  item=$first key=$key}
+			<li class="nav-content item{$key}">
+				<figure><img src="{www:img/icons/category_$first[id].png}" alt="" class="ico"><span>{$first['name']}</span><span class="ri">></span></figure>
+				<ul class="nav-ul2">
+					{set:$second_items = Api::run('getCategoryByParentid',array('#parent_id#',$first['id']));}
+					{foreach:items=$second_items  item=$second key=$k}
+					<li><a href="{url:/site/pro_list/cat/$second[id]}">{$second['name']}</a></li>
+					<?php if($k >= 3) break;?>
+					{/foreach}
+				</ul>
+				<p class="pull-right"><i class="glyphicon glyphicon-menu-right"></i></p>
+				<div class="nav-aside">
+					<h4 class="green">{$first['name']}</h4>
+					<ul>
+						{foreach:items=$second_items  item=$second}
+						<li><a href="{url:/site/pro_list/cat/$second[id]}">{$second['name']}</a></li>
+						{/foreach}
+					</ul>
+				</div>
+			</li>
+			{/foreach}
+		</ul>
+	</nav>
+	<figure id="main-banner" class="col-middle flexslider main-banner" data-autostart="1">
+		<ul class="slides no-offset" id="slideContent">
+			{set:$ad_list = Ad::getAdList(11);}
+			{foreach:items=$ad_list}
+			<li><a href="{url:$item[link]}"><img alt="{$item['name']}" src="{$this->getImg($item['content'])}"/></a></li>
+			{/foreach}
+		</ul>
+		<ul class="slide-nav">
+			{set:$ad_list = Ad::getAdList(11);}
+			{foreach:items=$ad_list key=$k}
+			<li {if:$k==0} class="active" {/if}><a href="{url:$item[link]}"></a></li>
+			{/foreach}
+		</ul>
+	</figure>
+	<figure class="r-aside01 col-right nav-ad-right">
+		{set:$ad_list2 = Ad::getAdList(13);}
+		{foreach:items=$ad_list2}
+		<p><a href="{url:$item[link]}"><img alt="{$item['name']}" src="{$this->getImg($item['content'])}"/></a></p>
+		{/foreach}
+	</figure>
+</section>
+<!-- END: nav-left top and banner -->
+<!-- BEGIN: goods list block -->
+{foreach:items=Api::run('getCategoryListTop')  item=$first }
+{set:$category_ad_list = array_group(Ad::getAdList(14, -1), 'goods_cat_id', true);}
+{set:$hot_goods_list = array_group(Api::run('getCommendHot',50), 'goods_cat_id');}
+<section id="list01" class="goods-list-block p-container clearfix">
+	<header class="row">
+		<h3 class="col-left">{$first['name']}</h3>
+		<ul class="col-middle">
+			<!-- <li><a>最新</a></li>
+			<li><a>最热</a></li> -->
+		</ul>
+		<p class="col-right t-right"><a class="pull-right" href="{url:/site/pro_list/cat/$first[id]}">更多&gt;&gt;</a></p>
+	</header>
+	<figure class="goods-tags-block01 col-left category_ad">
+		<p><img alt="banner_left01" src="{$this->getImg($category_ad_list[$first['id']]['content'])}"></p>
+	</figure>
+	<div class="col-middle goods-list">
+		<ul>
+			{foreach:items=Api::run('getCategoryExtendList',array('#categroy_id#',$first['id']),8)}
+			<li>
+				<div class="goods-show">
+					<a href="{url:/site/products/id/$item[id]}" title="{$item['name']}">
+						<img alt="{$item['name']}" src="{$this->getImg($item['img'], 165, 165)}">
+					</a>
+					<p class="goods-describe"><a href="{url:/site/products/id/$item[id]}" title="{$item['name']}">{$item['name']}</a></p>
+					<p class="shop-widget"><span><i>&yen;{$item['market_price']}</i></span><span>&yen;<i>{$item['sell_price']}</i></span></p>
+
+				</div>
+			</li>
+			{/foreach}
+		</ul>
+	</div>
+	<figure class="hot-sale col-right">
+		<div class="hot-sale-title01"><span class="hot_write">热销榜</span></div>
+		<ul>
+			{foreach:items=Api::run('getCommendHotByCategoryId', array('#category_id#',$first['id']), 4) item=$item key=$k}
+			{set:$pic_num = $k+1;}
+			<li class="hot-li">
+				<div class="fl img">
+					<a href="{url:/site/products/id/$item[id]}" title="{$item['name']}">
+						<img src="{$this->getImg($item['img'], 58, 58)}" alt="{$item['name']}">
+					</a>
+				</div>
+
+				<div class="fl desc">
+					<p class="hot_orange">NO.{$pic_num}</p>
+					<p class="desc_word"><a href="{url:/site/products/id/$item[id]}" title="{$item['name']}">{$item['name']}</a></p>
+				</div>
+			</li>
+			{/foreach}
+		</ul>
+	</figure>
+</section>
+{/foreach}
+<!-- END: goods list block -->
+</section>
+<!-- END: MAIN -->
+<!-- BEGIN: brand promote -->
+<section class="brand-promote clearfix">
+<div class="self-container">
+	<ul>
+		<li><img src="{www:img/common/promote_1.png}"><p>品类齐全 轻松购物</p></li>
+		<li><img src="{www:img/common/promote_2.png}"><p>多仓直发 极速配送</p></li>
+		<li><img src="{www:img/common/promote_3.png}"><p>正品行货 精城服务</p></li>
+		<li><img src="{www:img/common/promote_4.png}"><p>天天低价 畅选无优</p></li>
+	</ul>
+</div>
+</section>
+<!-- BEGIN: brand promote -->
+<!-- BEGIN: sider fix bar -->
+<nav class="side-fix-nav affix" style="display:none;">
+<div class="vertical-center-box">
+	<a class="cart"><img alt="cart" src="{www:img/icons/ico_fix_cart.png}"><span>购物车</span></a>
+	<i class="divide"></i>
+	<ul>
+		<li><a><img alt="ico_fix_balance.png" src="{www:img/icons/ico_fix_balance.png}"></a>
+		<p><a>账户余额</a><i></i></p></li>
+		<li><a><img alt="ico_fix_favorite.png" src="{www:img/icons/ico_fix_favorite.png}"></a>
+		<p><a>关注</a><i></i></p></li>
+		<li><a><img alt="ico_fix_collect.png" src="{www:img/icons/ico_fix_collect.png}"></a>
+		<p><a>收藏</a><i></i></p></li>
+		<li><a><img alt="ico_fix_history.png" src="{www:img/icons/ico_fix_history.png}"></a>
+		<p><a>历史记录</a><i></i></p></li>
+	</ul>
+	<a class="go-top"><img alt="gotop" src="{www:img/common/gotop.png}"></a>
+</div>
+</nav>
+<script>
+	seajs.use(['www/index']);
+</script>
+</body>
+</html>

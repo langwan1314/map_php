@@ -1,0 +1,4 @@
+@charset "UTF-8";
+.success-box .wrap_box{background:none;}
+.success-box .wrap_box .form_table{margin:25px auto;}
+.success-box .msg {font-size: 20px; padding-left:10px;}

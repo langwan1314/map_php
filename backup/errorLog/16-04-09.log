@@ -1,0 +1,45 @@
+<ERROR_BLOCK>
+excepInfo: Redis server went away
+excepFile: /data/www/teamtalk/lib/core/util/redis_class.php
+excepLine: 50
+excepCode: 0
+excepTime: 2016-04-09 07:57:59
+#0 WM_PATH/lib/core/util/redis_class.php(50): Redis->get(token_18611341214)
+#1 WM_PATH/controllers/appaccount.php(634): IRedis::get(token_18611341214)
+#2 WM_PATH/lib/web/action/inline_action.php(24): APPAccount->token()
+#3 WM_PATH/lib/web/controller/controller_app_class.php(94): IInlineAction->run()
+#4 WM_PATH/lib/core/webapplication_class.php(28): IAPPController->run()
+#5 WM_PATH/lib/core/application_class.php(115): WMApplication->execRequest()
+#6 WM_PATH/index.php(6): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+excepInfo: Redis server went away
+excepFile: /data/www/teamtalk/lib/core/util/redis_class.php
+excepLine: 50
+excepCode: 0
+excepTime: 2016-04-09 07:58:41
+#0 WM_PATH/lib/core/util/redis_class.php(50): Redis->get(token_18611341214)
+#1 WM_PATH/controllers/appaccount.php(634): IRedis::get(token_18611341214)
+#2 WM_PATH/lib/web/action/inline_action.php(24): APPAccount->token()
+#3 WM_PATH/lib/web/controller/controller_app_class.php(94): IInlineAction->run()
+#4 WM_PATH/lib/core/webapplication_class.php(28): IAPPController->run()
+#5 WM_PATH/lib/core/application_class.php(115): WMApplication->execRequest()
+#6 WM_PATH/index.php(6): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+excepInfo: Redis server went away
+excepFile: /data/www/teamtalk/lib/core/util/redis_class.php
+excepLine: 50
+excepCode: 0
+excepTime: 2016-04-09 07:59:01
+#0 WM_PATH/lib/core/util/redis_class.php(50): Redis->get(token_18611341214)
+#1 WM_PATH/controllers/appaccount.php(634): IRedis::get(token_18611341214)
+#2 WM_PATH/lib/web/action/inline_action.php(24): APPAccount->token()
+#3 WM_PATH/lib/web/controller/controller_app_class.php(94): IInlineAction->run()
+#4 WM_PATH/lib/core/webapplication_class.php(28): IAPPController->run()
+#5 WM_PATH/lib/core/application_class.php(115): WMApplication->execRequest()
+#6 WM_PATH/index.php(6): IApplication->run()
+</ERROR_BLOCK>
+

@@ -1,0 +1,20 @@
+<div class="p-container">
+<div class="help m_10">
+	<div class="cont clearfix">
+		{foreach:items=Api::run('getHelpCategoryFoot') item=$helpCat}
+		<dl>
+			<dt><a href="{url:/site/help_list/id/$helpCat[id]}">{$helpCat['name']}</a></dt>
+			{foreach:items=Api::run('getHelpListByCatidAll',array('#cat_id#',$helpCat['id']))}
+			<dd><a href="{url:/site/help/id/$item[id]}">{$item['name']}</a></dd>
+			{/foreach}
+		</dl>
+		{/foreach}
+	</div>
+</div>
+{echo:IFilter::stripSlash($siteConfig->site_footer_code)}
+</div>
+<!--public template-->
+<div id="joinCartAnimate">
+	<img src="">
+</div>
+<!--end public template-->

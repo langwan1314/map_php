@@ -1,0 +1,12 @@
+{set:$STATIC_GLOBAL_VERSION = '20151020'}
+<script>
+	var FRONTEND_HOST = 'http://www.crycoder.com/frontend/';
+	var STATIC_GLOBAL_VERSION = {$STATIC_GLOBAL_VERSION};
+</script>
+<script type="text/javascript" src="/frontend/jquery/jquery-1.8.3.min.js?v{$STATIC_GLOBAL_VERSION}"></script>
+<script type="text/javascript" src="/frontend/seajs/sea.js?v{$STATIC_GLOBAL_VERSION}"></script>
+<script type="text/javascript" src="/frontend/seajs/config.js?v{$STATIC_GLOBAL_VERSION}"></script>
+<script>
+	seajs.use('www/common');
+	seajs.use('ywj/auto');
+</script>

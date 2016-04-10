@@ -1,0 +1,30 @@
+<div class="p-container p-search clear">
+	<div class="s-logo">
+		<a href="{url:/}">
+			<img alt="开心菜园" src="{www:img/logo.png}">
+		</a>
+	</div>
+
+	<div class="s-search">
+		<div class="center-block">
+			<form class="s-form" action="{url:/}">
+				<input type='hidden' name='controller' value='site' />
+				<input type='hidden' name='action' value='search_list' />
+				<input type="text" name="word" class="s-input" autocomplete="off" id="searchInput" value="输入关键字..." />
+				<input type="submit" value="搜索" class="s-btn" onclick="checkInput('word','输入关键字...');" id="searchBtn"/>
+				<label for="searchInput" class="search-ico"></label>
+				<p class="hot-word"><span>热门关键字：</span>
+					{foreach:items=Api::run('getKeywordList') }
+					{set:$tmpWord = urlencode($item['word']);}
+					<a href="{url:/site/search_list/word/$tmpWord}">{$item['word']}</a>
+					{/foreach}
+				</p>
+			</form>
+		</div>
+	</div>
+
+	<div class="s-right" style="display:none;">
+		<a href="#"><img alt="one-key" src="/frontend/app/www/img/common/one.png"><span>一站式购齐</span></a>
+		<a href="#"><img alt="88" src="/frontend/app/www/img/common/88.png"><span>满88包邮</span></a>
+	</div>
+</div>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<title>开心菜园_微信支付</title>
+	<link rel="stylesheet" href="{www:css/weixin.css}"/>
+	<script type="text/javascript" src="/frontend/jquery/jquery-1.8.3.min.js?v{$STATIC_GLOBAL_VERSION}"></script>
+</head>
+<body>
+<div class="header pngFix">
+	<h1 class="pay_logo"><a href="/" class="index_access"><img class="pngFix" src="{www:img/weixin/weixin_pay.png}" alt="微信支付标志" title="微信支付"></a></h1>
+</div>
+<div class="content">
+	<div class="wrapper mail_box">
+		<div class="mail_box_inner pngFix">
+			<div class="area primary">
+				<div class="pay_msg qr_default" id="payMsg">
+					<div class="area_hd">
+						<h2>支付结果</h2>
+					</div>
+					<div class="area_bd" id="pay_succ">
+						<i class="icon110_msg pngFix"></i>
+						<h3 class="pay_msg_t">购买成功</h3>
+						<div id="payMsgDetail" class="vh">
+							<p class="pay_msg_desc"><span id="userName">{$this->user['username']}</span>，你成功完成了本次交易。</p>
+							<p class="pay_tip"><span id="redirectTimer">5</span>秒后将关闭此页面，你也可以点击 <a href="javascript:;" target="_blank" id="resultLink">这里</a> 立即关闭。</p>
+						</div>
+					</div>
+
+					<div class="area_bd" id="pay_error">
+						<i class="icon110_msg pngFix"></i>
+						<h3 class="pay_msg_t">无法支付</h3>
+						<p class="pay_msg_desc">商品金额大于银行卡快捷支付限额</p>
+					</div>
+
+					<div class="area_bd" id="qr_normal" style="display:block;">
+						<span class="qr_img_wrapper"><img class="qrcode" alt="二维码" id="QRcode" src="http://paysdk.weixin.qq.com/example/qrcode.php?data={set:echo urlencode($this->pay_url);}"></span>
+						<div class="msg_default_box">
+							<i class="icon60_qr pngFix"></i>
+							<p>请使用微信扫描<br>二维码以完成支付</p>
+						</div>
+						<div class="msg_box" style="display: none;">
+							<i class="icon60_qr pngFix"></i>
+							<p><strong>扫描成功</strong>请在手机确认支付</p>
+						</div>
+					</div>
+
+				</div>
+			</div>
+			<div class="area second">
+				<div class="pay_bill shopping">
+					<div class="area_hd">
+						<h2>支付清单</h2>
+						<span class="icon_wrapper"><i class="icon60_pay pngFix"></i></span>
+					</div>
+					<div class="area_bd">
+						<h3 class="pay_money"> <span>￥</span>{$this->order_info['real_amount']}</h3>
+						<div class="pay_bill_unit">
+							<dl>
+								<dt>开心菜园网</dt>
+								<dd>订单编号{$this->order_info['order_no']}</dd>
+							</dl>
+							<div class="pay_bill_info">
+								<!--<p><label>交易单号</label><span class="pay_bill_value">1217209101201511300278742382</span></p>-->
+								<p><label>创建时间</label><span class="pay_bill_value">{$this->order_info['create_time']}</span></p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="aside">
+				<div class="pay_widget help">
+					<div class="pay_widget_hd">
+						<i class="icon30_add_on pngFix"></i>
+					</div>
+					<div class="pay_widget_bd">
+						<strong class="widget_name">客服</strong>
+						<p class="widget_desc">4000772888</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<b class="mail_box_corner left pngFix"></b>
+		<b class="mail_box_corner right pngFix"></b>
+	</div>
+</div>
+<div class="footer">
+	<p class="linklist">
+		<a href="#">关于我们</a>
+		<a href="#">服务条款</a>
+		<a href="#">反馈建议</a>
+	</p>
+	<p class="copyright">&copy; 2015 - 2016 开心菜园 Inc. All reserved.</p>
+</div>
+<script>
+	var JUDGE_ORDER_URL = "{url:pay/orderIsPay?order_no=}"+{$this->order_info['order_no']};
+	$(document).ready(function(){
+		var timeInterval = setInterval(function(){
+			$.get(JUDGE_ORDER_URL, function(r){
+				if (r.code == 200) {
+					if (r.is_pay == 1) {
+						paySuccess();
+						clearInterval(timeInterval);
+					}
+				}else{
+					clearInterval(timeInterval);
+				}
+			}, 'json');
+		}, 10000)
+	});
+
+	function paySuccess()
+	{
+		$("#pay_succ,#payMsgDetail").show();
+		$("#qr_normal").hide();
+		var num = 5;
+		var $tk = $("#redirectTimer");
+		setInterval(function(){
+			num --;
+			$tk.text(num);
+			if (num <= 0) {
+				window.close();
+			}
+		},1000);
+
+		$("#resultLink").click(function(){
+			window.close();
+		});
+	}
+
+</script>
+</body>
+</html>

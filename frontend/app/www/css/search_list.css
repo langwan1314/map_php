@@ -1,0 +1,5 @@
+@charset "UTF-8";
+.search_list_page{margin-top:10px;}
+.search_list_page .search_list .box{border-top:1px solid #eee;}
+.search_list_page .search_list .result{border-bottom:2px solid #99cc33;padding:0 0 6px 0;font-size:13px;}
+.search_list_page .search_list .t_l{padding:6px 0 0 20px;}

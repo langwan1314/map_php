@@ -1,0 +1,9 @@
+{set:$seo_data=array();$site_config=new Config('site_config');}
+{set:$seo_data['title']=$this->title.'_'.$site_config->name;}
+{set:seo::set($seo_data);}
+
+{if:$this->content}
+{echo:$this->content}
+{else:}
+商品没有更多描述哦-_-#
+{/if}

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+{set:
+$myCartObj  = new Cart();
+$myCartInfo = $myCartObj->getMyCart();
+$siteConfig = new Config("site_config");
+$callback   = IReq::get('callback') ? urlencode(IFilter::act(IReq::get('callback'),'url')) : '';
+}
+<html>
+<head>
+	{include:layouts/head.html}
+</head>
+<body>
+{include:layouts/header.html}
+{include:layouts/search.html}
+{include:layouts/nav.html}
+<div class="p-container">
+	{echo:Ad::show(1)}
+	{viewcontent}
+</div>
+{include:layouts/footer.html}
+</body>
+</html>

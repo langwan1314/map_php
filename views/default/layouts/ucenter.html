@@ -1,0 +1,121 @@
+<!DOCTYPE>
+{set:
+$myCartObj  = new Cart();
+$myCartInfo = $myCartObj->getMyCart();
+$siteConfig = new Config("site_config");
+$callback   = IReq::get('callback') ? urlencode(IFilter::act(IReq::get('callback'),'url')) : '';
+}
+<html>
+<head>
+	{include:layouts/head.html}
+	<link rel="stylesheet" href="{www:css/user.css}" />
+	<link rel="stylesheet" href="{www:css/index.css}" />
+	<script type='text/javascript'>
+		//用户中心导航条
+		function menu_current()
+		{
+		var current = "{echo:$this->getAction()->getId()}";
+		if(current == 'consult_old') current='consult';
+		else if(current == 'isevaluation') current ='evaluation';
+		else if(current == 'withdraw') current = 'account_log';
+		var tmpUrl = "{url:/ucenter/current}";
+		tmpUrl = tmpUrl.replace("current",current);
+		$('div.cont ul.list li a[href^="'+tmpUrl+'"]').parent().addClass("current");
+		}
+	</script>
+</head>
+	<body>
+	{include:layouts/header.html}
+	{include:layouts/search.html}
+	{include:layouts/nav.html}
+	<div class="p-container ucenter">
+		<div class="position">
+			您当前的位置： <a href="{url:/}">首页</a> > <a href="{url:/ucenter/index}">我的账户</a>
+		</div>
+		<div class="wrapper clearfix p-user">
+			<div class="sidebar f_l">
+				<div class="box">
+					<div class="title"><h2>交易记录</h2></div>
+					<div class="cont">
+						<ul class="list">
+							<li><a href="{url:/ucenter/order}">我的订单</a></li>
+							<li><a href="{url:/ucenter/integral}">我的积分</a></li>
+							<li><a href="{url:/ucenter/redpacket}">我的代金券</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="box">
+					<div class="title"><h2 class='bg2'>服务中心</h2></div>
+					<div class="cont">
+						<ul class="list">
+							<li><a href="{url:/ucenter/refunds}">退款申请</a></li>
+							<li><a href="{url:/ucenter/complain}">站点建议</a></li>
+							<li><a href="{url:/ucenter/consult}">商品咨询</a></li>
+							<li><a href="{url:/ucenter/evaluation}">商品评价</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="box">
+					<div class="title"><h2 class='bg3'>应用</h2></div>
+					<div class="cont">
+						<ul class="list">
+							<li><a href="{url:/ucenter/message}">短信息</a></li>
+							<li><a href="{url:/ucenter/favorite}">收藏夹</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="box">
+					<div class="title"><h2 class='bg4'>账户资金</h2></div>
+					<div class="cont">
+						<ul class="list">
+							<li><a href="{url:/ucenter/account_log}">帐户余额</a></li>
+							<li><a href="{url:/ucenter/online_recharge}">在线充值</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="box">
+					<div class="title"><h2 class='bg5'>个人设置</h2></div>
+					<div class="cont">
+						<ul class="list">
+							<li><a href="{url:/ucenter/address}">地址管理</a></li>
+							<li><a href="{url:/ucenter/info}">个人资料</a></li>
+							<li><a href="{url:/ucenter/password}">修改密码</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			{viewcontent}
+		</div>
+	</div>
+	{include:layouts/footer.html}
+	<script type='text/javascript'>
+	//DOM加载完毕后运行
+	$(function()
+	{
+		$(".tabs").each(function(i){
+		var parrent = $(this);
+			$('.tabs_menu .node',this).each(function(j){
+				var current=".node:eq("+j+")";
+				$(this).bind('click',function(event){
+					$('.tabs_menu .node',parrent).removeClass('current');
+					$(this).addClass('current');
+					$('.tabs_content>.node',parrent).css('display','none');
+					$('.tabs_content>.node:eq('+j+')',parrent).css('display','block');
+				});
+			});
+		});
+		//隔行换色
+		$(".list_table tr:nth-child(even)").addClass('even');
+		$(".list_table tr").hover(
+			function () {
+				$(this).addClass("sel");
+			},
+			function () {
+				$(this).removeClass("sel");
+			}
+		);
+		menu_current();
+	});
+	</script>
+</body>
+</html>

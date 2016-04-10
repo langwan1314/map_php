@@ -1,0 +1,45 @@
+@charset "UTF-8";
+.login-logo{float:left;width:100%;height: 150px;}
+.login-logo .s-logo{
+    margin: 35px auto;
+}
+.login-logo .s-logo .logo{float:left;display: block;height: 80px;}
+.login-logo h2{float: left;height: 50px;line-height: 50px;font-size: 20px;padding-left: 30px;margin: 15px 0 0 30px;border-left: 2px solid #B2B2B2;color: #B2B2B2;}
+.login-container{background:#eee;}
+.login-container .wrap_box{background:none;}
+
+.login-container .l-form{width: 384px;height: 370px;background-color: #fff;margin-bottom: 30px;}
+.login-container .l-title{margin: 15px 20px;}
+.login-container .l-form .form_table{margin:15px 20px;}
+.login-container .l-form .gray{width:300px;height:38px;line-height: 38px;outline: none;}
+
+.login-container .l-ad{width:535px;height:353px;}
+
+.login-container .login_box .attr{color: #BDBDBD; margin-top:20px;font-size: 13px;}
+
+.login-container .invalid-msg , .login-container .valid-msg{display:block;font-size: 12px;}
+.login-container .l-form .rem-attr{margin-top: 0px;font-size: 12px;}
+.login-container .l-form .pwd-attr{margin-top:0px}
+.login-container .l-form .pwd-attr a{color: #BDBDBD;text-decoration: none;font-size: 12px;}
+.login-container .l-form .login-qq{margin-top:20px;}
+.login-container .l-form .error-prompt{padding:0;border: none;height: 0px;}
+.login-container .l-form .error-prompt .prompt{border:none;background: none;color: #ff8e0e;font-size: 12px;margin-bottom: -20px;}
+.reg-box{background:#eee; padding-bottom: 20px;font-size:12px;}
+.reg-box .wrap_box{background:none;}
+.reg-box .wrap_box .box{border:none; background-color:#fff; padding-top:20px;}
+.reg-box .txt{width: 294px;height:30px;padding-left: 8px;outline:none}
+.reg-box .txt:focus{border-color:#ff8e0e;}
+.reg-box .captcha{width:125px;}
+.reg-box .box label{
+}
+.reg-box label.valid-msg{color:#99cc33;}
+.reg-box .box .form_table{width:100%;display:block;}
+.reg-box .box .form_table tbody{margin-top:20px;}
+.reg-box .box .form_table td{padding: 16px 5px; margin-top: 19px;}
+.reg-box .submit_reg{background:none;background-color: #ff8e0e;width:294px; height:38px;font-size:16px;color:#fff;text-indent: 0;line-height: 38px;}
+.reg-box .important{padding-right: 2px;}
+
+.login-suggest .next_step{background:none;border:1px solid #99cc33; border-radius: 2px; color:#99cc33; line-height: 46px; text-indent: 0; text-align:center;}
+.login-suggest td{padding: 20px 50px !important;}
+
+

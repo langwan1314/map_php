@@ -1,0 +1,52 @@
+<!DOCTYPE>
+{set:
+$siteConfig = new Config("site_config");
+$callback   = IReq::get('callback') ? urlencode(IFilter::act(IReq::get('callback'),'url')) : '';
+}
+<html>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>{echo:$siteConfig->name}</title>
+		<link type="image/x-icon" href="/favicon.ico" rel="icon">
+		<link rel="stylesheet" href="{skin:css/index.css}" />
+		{include:layouts/seajs.html}
+		{js:validate}
+		{js:form}
+		{js:dialog}
+		<link rel="stylesheet" href="{www:css/common.css}" />
+		<script type='text/javascript' src="{theme:javascript/common.js}"></script>
+		<script type='text/javascript' src='{theme:javascript/site.js}'></script>
+	</head>
+	<body class="second" >
+		<header class="p-header">
+			<div class="p-small-container">
+				<div class="h-left h-nav">
+					<p class="h-index pull-left"><a href="/">首页</a><span>欢迎来到开心菜园！</span></p>
+					{if:$this->user}
+					<p class="h-login"><a href="{url:/ucenter/index?callback=$callback}">{echo:$this->user['username']}</a><a href="{url:/simple/logout}">安全退出</a></p>
+					{else:}
+					<p class="h-login">请<a href="{url:/simple/login?callback=$callback}">登录</a><a href="{url:/simple/reg?callback=$callback}">注册</a></p>
+					{/if}
+				</div>
+				<div class="h-right h-nav">
+					<p class="h-app"><a>APP下载</a></p>
+				</div>
+			</div>
+		</header>
+		{viewcontent}
+		<div class="help m_10 p-small-container">
+			<div class="cont clearfix">
+				{foreach:items=Api::run('getHelpCategoryFoot') item=$helpCat}
+				<dl>
+					<dt><a href="{url:/site/help_list/id/$helpCat[id]}">{$helpCat['name']}</a></dt>
+					{foreach:items=Api::run('getHelpListByCatidAll',array('#cat_id#',$helpCat['id']))}
+					<dd><a href="{url:/site/help/id/$item[id]}">{$item['name']}</a></dd>
+					{/foreach}
+				</dl>
+				{/foreach}
+			</div>
+		</div>
+		{echo:IFilter::stripSlash($siteConfig->site_footer_code)}
+	</body>
+</html>
